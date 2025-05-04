@@ -17,15 +17,6 @@ namespace Enrollment_System
         {
             InitializeComponent();
         }
-        public static class Database
-        {
-            public static string ConnectionString => @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""C:\Users\seant\OneDrive\Documents\Works\2nd Year 2nd Sem\StudentInformationSystem.accdb"";";
-
-            public static OleDbConnection GetConnection()
-            {
-                return new OleDbConnection(ConnectionString);
-            }
-        }
 
         private void btnAddSchedule_Click(object sender, EventArgs e)
         {
@@ -69,7 +60,7 @@ namespace Enrollment_System
         {
             try
             {
-                using (OleDbConnection conn = Database.GetConnection())
+                using (OleDbConnection conn = new OleDbConnection(Database.ConnectionString))
                 {
                     conn.Open();
                     string query = "SELECT SSFEDPCODE, SSFSUBJCODE, SSFSTARTTIME, SSFENDTIME, SSFDAYS, SSFROOM, SSFMAXSIZE, SSFCLASSSIZE, SSFSTATUS, SSFXM, SSFSECTION, SSFSCHOOLYEAR FROM SubjectSchedFile";
@@ -99,7 +90,7 @@ namespace Enrollment_System
         {
             try
             {
-                using (OleDbConnection conn = Database.GetConnection())
+                using (OleDbConnection conn = new OleDbConnection(Database.ConnectionString))
                 {
                     conn.Open();
                     string sql = "SELECT SSFEDPCODE, SSFSUBJCODE, SSFSTARTTIME, SSFENDTIME, SSFDAYS, SSFROOM, SSFMAXSIZE, SSFCLASSSIZE, SSFSTATUS, SSFXM, SSFSECTION, SSFSCHOOLYEAR FROM SubjectSchedFile";

@@ -174,7 +174,6 @@
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -185,7 +184,6 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label7
             // 
@@ -315,7 +313,6 @@
             this.btnSearch.TabIndex = 18;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnAddRelationship
             // 
@@ -326,7 +323,6 @@
             this.btnAddRelationship.TabIndex = 17;
             this.btnAddRelationship.Text = "Add";
             this.btnAddRelationship.UseVisualStyleBackColor = true;
-            this.btnAddRelationship.Click += new System.EventHandler(this.btnAddRelationship_Click);
             // 
             // rbCorequisite
             // 
@@ -404,7 +400,6 @@
             this.Controls.Add(this.grpBoxSubj);
             this.Name = "SubjectForm";
             this.Text = "SubjectForm";
-            this.Load += new System.EventHandler(this.SubjectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUnits)).EndInit();
             this.grpBoxSubj.ResumeLayout(false);
             this.grpBoxSubj.PerformLayout();
